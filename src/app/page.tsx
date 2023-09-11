@@ -8,7 +8,10 @@ export default async function Home() {
   return (
     <>
       {session ? (
-        <UserCard user={session?.user} pagetype={"Home"} />
+        <div>
+          <h1 className="text-5xl">Hello, {session?.user?.email}!</h1>
+          <UserCard user={session?.user} pagetype={"Home"} />
+        </div>
       ) : (
         <h1 className="text-5xl">You Shall Not Pass!</h1>
       )}
